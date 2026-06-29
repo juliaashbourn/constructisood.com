@@ -1,128 +1,285 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HUNANIMA - Machines Agricoles Simples</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #fefefe;
-      color: #333;
-    }
-    header {
-      background-color: #2e7d32; /* Vert foncé */
-      color: #fdd835; /* Jaune vif */
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-    header p {
-      margin: 5px 0 0;
-      font-size: 1.2em;
-    }
-    nav {
-      background-color: #fdd835;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-      color: #2e7d32;
-    }
-    .hero {
-      background: url('https://i.pinimg.com/550x/a9/df/51/a9df5172829f8c05f5b92f97553d41ae.jpg') no-repeat center center/cover;
-      height: 350px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-shadow: 2px 2px 4px #000;
-      font-size: 2em;
-    }
-    section {
-      padding: 50px 20px;
-      text-align: center;
-    }
-    section h2 {
-      color: #2e7d32;
-      margin-bottom: 20px;
-    }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-    .gallery img {
-      width: 280px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-    footer {
-      background-color: #2e7d32;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-    }
-    footer p {
-      margin: 5px 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONSTRUCTIS LTD OOD | Advanced Chemical & Allied Products Wholesalers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0b0f19; /* Carbon Industrial Steel */
+            color: #f3f4f6;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .font-cyber-industrial {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        /* 2026 Chemical Fusion Accents */
+        .text-neon-chem { color: #ff007f; }
+        .bg-neon-chem { background-color: #ff007f; }
+        .border-neon-chem { border-color: #ff007f; }
+        
+        .text-liquid-cyan { color: #00f0ff; }
+        .bg-liquid-cyan { background-color: #00f0ff; }
+
+        /* Liquid Bio-Tech Mesh Panels */
+        .chem-panel-card {
+            background: rgba(18, 24, 38, 0.7);
+            border: 1px solid rgba(0, 240, 255, 0.12);
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .chem-panel-card:hover {
+            border-color: rgba(ff, 0, 127, 0.5);
+            box-shadow: 0 20px 50px rgba(0, 240, 255, 0.08);
+            transform: scale(1.02);
+        }
+
+        /* Fluid Reveal Animation Classes */
+        .scroll-trigger-node {
+            opacity: 0;
+            transform: translateY(50px) scale(0.98);
+            transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        .scroll-trigger-node.reveal-active {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    </style>
 </head>
-<body>
+<body class="antialiased overflow-x-hidden">
 
-  <header>
-    <h1>HUNANIMA</h1>
-    <p>Machines Agricoles Simples et Fiables</p>
-  </header>
+    <!-- INDUSTRY OVERLAY CONTROL INTERFACE -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#0b0f19]/90 backdrop-blur-xl border-b border-white/5 px-6 py-4 md:px-12 flex items-center justify-between">
+        <a href="#" class="font-cyber-industrial font-700 text-lg md:text-xl tracking-tight text-white uppercase">
+            CONSTRUCTIS <span class="text-neon-chem font-light text-xs font-mono tracking-widest border border-neon-chem/40 px-2 py-0.5 rounded ml-2">LTD OOD</span>
+        </a>
+        <nav class="hidden xl:flex items-center gap-8 text-[11px] font-mono tracking-[0.25em] uppercase text-neutral-400">
+            <a href="#molecular-compounds" class="hover:text-liquid-cyan transition-colors">01 // Bulk Compounds</a>
+            <a href="#wholesale-logistics" class="hover:text-liquid-cyan transition-colors">02 // Logistics Node</a>
+            <a href="#security-protocols" class="hover:text-liquid-cyan transition-colors">03 // Tech Compliance</a>
+            <a href="#global-supply" class="hover:text-liquid-cyan transition-colors">04 // Supply Grid</a>
+            <a href="#terminal-access" class="hover:text-liquid-cyan transition-colors">05 // Contact Terminal</a>
+        </nav>
+        <a href="tel:359896148505" class="bg-liquid-cyan text-[#0b0f19] font-bold text-xs px-5 py-3 tracking-wider uppercase hover:bg-white hover:shadow-[0_0_20px_rgba(0,240,255,0.4)] transition-all rounded-md">
+            SECURE REQUISITION
+        </a>
+    </header>
 
-  <nav>
-    <a href="#about">À propos</a>
-    <a href="#gallery">Galerie</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <!-- SECTION 1: HERO INDUSTRIAL EXPOSITION -->
+    <main class="min-h-screen flex flex-col justify-center relative px-6 md:px-12 pt-32 pb-20">
+        <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-7 space-y-8">
+                <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-md">
+                    <span class="w-2 h-2 rounded-full bg-neon-chem animate-pulse"></span>
+                    <span class="text-[10px] font-mono uppercase tracking-widest text-neutral-400">Chemical & Allied Wholesale Registry l l v2026</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-cyber-industrial font-700 text-white tracking-tight leading-[0.95] uppercase">
+                    MOLECULAR <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-neon-chem to-liquid-cyan">DISTRIBUTION</span> <br>AT GLOBAL SCALE.
+                </h1>
+                <p class="text-neutral-400 text-sm md:text-base max-w-xl font-light leading-relaxed">
+                    Constructis Ltd OOD operates at the cutting edge of industrial merchant wholesaling, importing and distributing certified high-grade chemical compositions and durable raw compound materials.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#molecular-compounds" class="bg-gradient-to-r from-neon-chem to-[#d0006f] text-white text-xs font-bold uppercase tracking-widest px-8 py-4 rounded-md transition-all hover:opacity-90">
+                        Explore Product Portfolios
+                    </a>
+                    <a href="#terminal-access" class="text-liquid-cyan text-xs font-bold uppercase tracking-widest px-4 py-4 flex items-center gap-2 hover:underline">
+                        Review Core Frameworks &rarr;
+                    </a>
+                </div>
+            </div>
 
-  <div class="hero">
-    <p>Votre partenaire pour des machines agricoles durables</p>
-  </div>
+            <div class="lg:col-span-5 h-[480px] md:h-[600px] rounded-2xl overflow-hidden border border-white/10 relative group bg-[#121826]">
+                <!-- PHOTO 1: Premium high-tech chemical factory production line / refinery aesthetic -->
+                <img src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover opacity-90 scale-105 group-hover:scale-100 transition duration-1000" alt="Advanced Chemical Processing Constructis">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0b0f19] via-transparent to-transparent"></div>
+                <div class="absolute bottom-6 left-6 right-6 p-6 bg-[#0b0f19]/95 backdrop-blur-md border border-liquid-cyan/20 rounded-xl">
+                    <span class="text-liquid-cyan font-mono text-[9px] tracking-widest uppercase block mb-1">// DISTRIBUTED STORAGE REGISTERED</span>
+                    <p class="text-xs text-neutral-300">Varna Bulk Chemical Transfer Node Active.</p>
+                </div>
+            </div>
 
-  <section id="about">
-    <h2>À propos de nous</h2>
-    <p>
-      Chez <strong>HUNANIMA</strong>, nous nous spécialisons dans la fabrication et la distribution de 
-      <strong>machines agricoles simples</strong> pour faciliter le travail des agriculteurs. 
-      Nos solutions combinent <em>durabilité, efficacité et innovation</em> afin de répondre aux besoins de toutes les exploitations.
-    </p>
-  </section>
+        </div>
+    </main>
 
-  <section id="gallery">
-    <h2>Nos Machines</h2>
-    <div class="gallery">
-      <img src="http://ogden_images.s3.amazonaws.com/www.motherearthnews.com/images/2014/11/22234423/Boaz-Mini-Combine-jpg.jpg" alt="Mini moissonneuse">
-      <img src="https://krs-agro.ru/products/zagotovka_kormov/elho/19/7.jpg" alt="Machine agricole">
-      <img src="https://img.mod-network.net/files/images/6218ac69d37fb/SimpleFarmSilov1000_6222.jpg" alt="Équipement agricole simple">
-    </div>
-  </section>
+    <!-- SECTION 2: VERIFIED METADATA INTERCEPT -->
+    <section class="py-16 bg-[#070a12] border-y border-white/5 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+            <div class="space-y-2">
+                <span class="text-neon-chem font-mono text-xs font-bold tracking-widest block uppercase">// ORIGIN VERIFICATION DATA</span>
+                <h2 class="text-xl md:text-2xl font-cyber-industrial font-700 text-white uppercase tracking-tight">Verified Token: Screenshot 2026-06-29 215534.jpg</h2>
+            </div>
+            <div class="bg-white/5 border border-white/10 px-6 py-4 rounded-md font-mono text-xs text-neutral-400">
+                <span class="text-white block font-semibold mb-1">Key Principal Officer:</span> DIMKA DIMITROVA
+            </div>
+        </div>
+    </section>
 
-  <section id="contact">
-    <h2>Contactez-nous</h2>
-    <p><strong>Email :</strong> admin@tyusex.shop</p>
-    <p><strong>Téléphone :</strong> +33 7 38 50 26 36</p>
-    <p><strong>Adresse :</strong> Avenue Baratier, Montmorency, 95160, France</p>
-  </section>
+    <!-- SECTION 3: ULTRA-LONG CYBER INDUSTRY CONTINUOUS LAYOUT -->
+    <section class="py-32 px-6 md:px-12 max-w-7xl mx-auto space-y-44">
 
-  <footer>
-    <p>&copy; 2025 HUNANIMA - Tous droits réservés.</p>
-  </footer>
+        <!-- CORE FLOW NODE 01 -->
+        <div id="molecular-compounds" class="grid lg:grid-cols-12 gap-12 items-center scroll-trigger-node">
+            <div class="lg:col-span-6 order-2 lg:order-1 space-y-6">
+                <div class="text-liquid-cyan font-mono text-xs font-bold tracking-widest uppercase">// PORTFOLIO MODULE 01</div>
+                <h3 class="text-3xl md:text-5xl font-cyber-industrial font-700 text-white uppercase leading-tight">Advanced Industrial <br><span class="text-neon-chem">Chemical Merchandising</span></h3>
+                <p class="text-neutral-400 text-sm leading-relaxed font-light">
+                    Providing top-tier procurement pipelines for bulk industrial solvents, synthesized additives, and specialist compound components across diverse manufacturing sectors.
+                </p>
+                <div class="border-l-2 border-liquid-cyan pl-4 font-mono text-xs text-neutral-400">
+                    Compliant with international safety registries and non-durable goods protocols.
+                </div>
+            </div>
+            <div class="lg:col-span-6 order-1 lg:order-2 h-[420px] md:h-[500px] overflow-hidden chem-panel-card">
+                <!-- PHOTO 2: Professional laboratory scientist working with fluid analysis / high-tech compounds -->
+                <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover" alt="Industrial Chemistry Bulk Wholesalers">
+            </div>
+        </div>
 
+        <!-- CORE FLOW NODE 02 -->
+        <div id="wholesale-logistics" class="grid lg:grid-cols-12 gap-12 items-center scroll-trigger-node">
+            <div class="lg:col-span-6 h-[420px] md:h-[500px] overflow-hidden chem-panel-card">
+                <!-- PHOTO 3: Safe, structured chemical storage facility or modern bulk barrel terminal -->
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover" alt="Bulk Distribution Logistics Terminal">
+            </div>
+            <div class="lg:col-span-6 space-y-6">
+                <div class="text-neon-chem font-mono text-xs font-bold tracking-widest uppercase">// INFRASTRUCTURE MODULE 02</div>
+                <h3 class="text-3xl md:text-5xl font-cyber-industrial font-700 text-white uppercase leading-tight">Elite Supply Chains & <br><span class="text-white">Allied Asset Tracking</span></h3>
+                <p class="text-neutral-400 text-sm leading-relaxed font-light">
+                    Our sophisticated merchant distribution grid provides constant batch verification, moisture-controlled containment monitoring, and specialized freight execution vectors for all nondurable commodities.
+                </p>
+                <ul class="space-y-2 text-xs font-mono text-neutral-300">
+                    <li class="flex items-center gap-2"><span class="text-liquid-cyan">►</span> Precision Batch Traceability Matrix</li>
+                    <li class="flex items-center gap-2"><span class="text-liquid-cyan">►</span> Temperature-Stabilized Bulk Liquid Containers</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- CORE FLOW NODE 03 -->
+        <div id="security-protocols" class="grid lg:grid-cols-12 gap-12 items-center scroll-trigger-node">
+            <div class="lg:col-span-6 order-2 lg:order-1 space-y-6">
+                <div class="text-liquid-cyan font-mono text-xs font-bold tracking-widest uppercase">// STANDARDS MODULE 03</div>
+                <h3 class="text-3xl md:text-5xl font-cyber-industrial font-700 text-white uppercase leading-tight">High-Level Quality <br><span class="text-neutral-500">Assurance Pipelines</span></h3>
+                <p class="text-neutral-400 text-sm leading-relaxed font-light">
+                    Every singular consignment goes through premium purity profiling and structural evaluations, aligning fully with European commercial merchant benchmarks.
+                </p>
+                <div class="p-5 bg-white/5 rounded-lg border border-white/10 text-xs text-neutral-400 font-mono">
+                    Systematic compliance verified under Dimka Dimitrova registration frameworks.
+                </div>
+            </div>
+            <div class="lg:col-span-6 order-1 lg:order-2 h-[420px] md:h-[500px] overflow-hidden chem-panel-card">
+                <!-- PHOTO 4: Detailed image of modern clean industrial chemical containers / pipettes / science machinery -->
+                <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover" alt="Quality Compliance Diagnostics">
+            </div>
+        </div>
+
+    </section>
+
+    <!-- SECTION 4: REAL-TIME CAPACITY INDICATORS -->
+    <section id="global-supply" class="py-24 bg-[#070a12] border-y border-white/5 relative overflow-hidden px-6">
+        <div class="max-w-4xl mx-auto text-center space-y-8 scroll-trigger-node">
+            <span class="text-liquid-cyan font-mono text-xs font-bold tracking-[0.3em] uppercase block">SUPPLY LAYER INFRASTRUCTURE</span>
+            <h2 class="text-3xl md:text-5xl font-cyber-industrial font-700 text-white uppercase tracking-tight">Verified Merchant Capacities.</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6">
+                <div class="p-6 bg-[#0b0f19] border border-white/5 rounded-lg">
+                    <div class="text-2xl md:text-3xl font-cyber-industrial font-700 text-liquid-cyan">100%</div>
+                    <div class="text-[9px] font-mono uppercase text-neutral-500 mt-1">Purity Checked</div>
+                </div>
+                <div class="p-6 bg-[#0b0f19] border border-white/5 rounded-lg">
+                    <div class="text-2xl md:text-3xl font-cyber-industrial font-700 text-white">2026</div>
+                    <div class="text-[9px] font-mono uppercase text-neutral-500 mt-1">Protocol Standard</div>
+                </div>
+                <div class="p-6 bg-[#0b0f19] border border-white/5 rounded-lg">
+                    <div class="text-2xl md:text-3xl font-cyber-industrial font-700 text-white">BG-VAR</div>
+                    <div class="text-[9px] font-mono uppercase text-neutral-500 mt-1">Regional Node</div>
+                </div>
+                <div class="p-6 bg-[#0b0f19] border border-white/5 rounded-lg">
+                    <div class="text-2xl md:text-3xl font-cyber-industrial font-700 text-neon-chem">OOD</div>
+                    <div class="text-[9px] font-mono uppercase text-neutral-500 mt-1">Structure Code</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: GEOGRAPHICAL REGISTRY ANCHOR (Clean White Contrast Zone) -->
+    <section class="bg-white text-[#0b0f19] py-24 px-6 text-center">
+        <div class="max-w-4xl mx-auto space-y-4">
+            <span class="bg-[#0b0f19] text-white font-mono text-[10px] font-bold uppercase px-4 py-1.5 rounded tracking-widest">
+                REGISTERED OPERATIONS CENTRE
+            </span>
+            <h2 class="text-2xl md:text-4xl font-cyber-industrial font-700 uppercase tracking-tight">20 Chataldzha str./blvd., Varna, Bulgaria</h2>
+            <p class="text-gray-600 font-light text-sm max-w-2xl mx-auto">
+                Managing strategic chemical trade assets from Primorski District, Entrance A, Floor 6, Apartment 25, Varna 9000. Serving elite wholesale networks.
+            </p>
+        </div>
+    </section>
+
+    <!-- SECTION 6: CHEMICAL CONTROL TERMINAL FOOTER -->
+    <footer id="terminal-access" class="bg-[#04060b] text-white pt-28 pb-16 border-t border-white/10 relative">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 grid lg:grid-cols-12 gap-16 pb-16 border-b border-white/5">
+            
+            <!-- Left Column -->
+            <div class="lg:col-span-7 space-y-10">
+                <div>
+                    <h3 class="text-4xl md:text-5xl font-cyber-industrial font-700 uppercase tracking-tight text-white leading-none">
+                        BULK COMMODITY <br>LOGISTICS <span class="text-liquid-cyan">ENGAGED.</span>
+                    </h3>
+                    <p class="text-neutral-500 font-light text-xs max-w-sm mt-4">Connecting downstream production labs and corporate manufacturing complexes with fully audited industrial chemical agents.</p>
+                </div>
+                <div class="space-y-2">
+                    <span class="text-liquid-cyan font-mono text-[9px] font-bold tracking-widest block uppercase">// SECURE DIGITAL MAILWAY</span>
+                    <a href="mailto:contact@constructisood.com" class="text-xl md:text-3xl font-cyber-industrial text-white hover:text-neon-chem transition-colors break-all border-b border-white/10 pb-1 inline-block">
+                        contact@constructisood.com
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="lg:col-span-5 flex flex-col justify-between items-start lg:items-end space-y-12">
+                <div class="w-full lg:text-right">
+                    <span class="text-neon-chem font-mono text-[9px] font-bold tracking-widest block mb-1 uppercase">// DUPLEX VOICE FREQUENCY</span>
+                    <a href="tel:359896148505" class="text-2xl md:text-4xl font-cyber-industrial font-700 tracking-tight text-liquid-cyan hover:text-white transition-colors">
+                        +359 89 614 8505
+                    </a>
+                </div>
+                <div class="w-full lg:text-right font-mono text-xs text-neutral-400 tracking-wide uppercase leading-relaxed">
+                    <strong class="text-white block font-cyber-industrial tracking-normal text-sm normal-case mb-2">Constructis Ltd OOD</strong>
+                    20 Chataldzha str./blvd., Primorski Distr.<br>
+                    Entr. A, Fl. 6, Apt. 25, Varna, 9000 Bulgaria
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Copyright Metadata -->
+        <div class="max-w-7xl mx-auto px-6 md:px-12 pt-8 flex flex-col sm:flex-row justify-between items-center text-[10px] tracking-widest text-neutral-600 font-mono uppercase gap-4">
+            <p>&copy;  CONSTRUCTIS LTD OOD. DISTRIBUTION COEFFICIENTS SECURED.</p>
+            <p>VARNA COMPLIANCE TERMINAL // BULGARIA // EU</p>
+        </div>
+    </footer>
+
+    <!-- Fluid Continuous Inversion Scroll Reveal Logic -->
+    <script>
+        const revealObserverCallback = (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-active');
+                }
+            });
+        };
+
+        const coreObserver = new IntersectionObserver(revealObserverCallback, {
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px"
+        });
+
+        document.querySelectorAll('.scroll-trigger-node').forEach(node => coreObserver.observe(node));
+    </script>
 </body>
 </html>
